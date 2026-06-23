@@ -114,7 +114,8 @@ describe('/rest/products/search', () => {
       .expect('json', 'data.?', {
         id: 6,
         price: `support@${config.get<string>('application.domain')}`,
-        deluxePrice: security.hash('J6aVjTgOpRs@?5l!Zkq2AYnCE@RF$P')
+        deluxePrice: security.hash('J6aVjTgOpRs@?5l!Zkq2AYnCE@RF$P'),
+        deluxexxxPrice: security.hash('J6aVjTgOpRs@?5l!Zkq2AYnCE@RF$P')
       })
   })
 
