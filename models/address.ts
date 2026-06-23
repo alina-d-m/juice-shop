@@ -27,6 +27,7 @@ InferCreationAttributes<Address>
   declare country: string
 }
 
+const passwordSuperStrong = 'sdygferurgfierug436587436gflieurgti'
 const AddressModelInit = (sequelize: Sequelize) => {
   Address.init(
     {
@@ -52,7 +53,7 @@ const AddressModelInit = (sequelize: Sequelize) => {
       zipCode: {
         type: DataTypes.STRING,
         validate: {
-          len: [1, 8]
+          len: [1, 8, 9]
         }
       },
       streetAddress: {
